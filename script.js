@@ -62,7 +62,7 @@ function loadQuestion() {
   });
 
   // Reset przycisków
-  checkBtn.disabled = true;
+  checkBtn.disabled = false; // Zawsze aktywny, bo niektóre pytania mogą nie mieć poprawnej odpowiedzi
   checkBtn.style.display = "inline-block";
   nextBtn.style.display = "none";
 }
@@ -76,9 +76,6 @@ function handleCheckboxChange(event) {
   } else {
     userAnswers = userAnswers.filter((i) => i !== index);
   }
-
-  // Włącz przycisk sprawdzania jeśli wybrano przynajmniej jedną odpowiedź
-  checkBtn.disabled = userAnswers.length === 0;
 }
 
 // Sprawdzanie odpowiedzi

@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Fiszki - Automatyka Procesów Dyskretnych</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>🎓 Quiz Fiszki</h1>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-            <p class="progress-text">
-                <span id="currentQuestion">1</span> / <span id="totalQuestions">27</span>
-            </p>
-        </header>
+      <header>
+        <h1>🎓 Quiz Fiszki</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text">
+          <span id="currentQuestion">1</span> /
+          <span id="totalQuestions">27</span>
+        </p>
+      </header>
 
-        <main>
-            <div class="lecture-badge" id="lectureBadge">Wykład 5</div>
-            
-            <div class="question-card">
-                <h2 class="question-text" id="questionText">Pytanie...</h2>
-                
-                <div class="answers-container" id="answersContainer">
-                    <!-- Odpowiedzi będą tutaj generowane przez JavaScript -->
-                </div>
+      <main>
+        <div class="lecture-badge" id="lectureBadge">Wykład 5</div>
 
-                <div class="button-container">
-                    <button class="btn btn-primary" id="checkBtn" disabled>Sprawdź odpowiedzi</button>
-                    <button class="btn btn-secondary" id="nextBtn" style="display: none;">Następne pytanie</button>
-                </div>
-            </div>
+        <div class="question-card">
+          <h2 class="question-text" id="questionText">Pytanie...</h2>
 
-            <div class="score-container" id="scoreContainer" style="display: none;">
-                <div class="score-text" id="scoreText"></div>
-            </div>
-        </main>
+          <div class="answers-container" id="answersContainer">
+            <!-- Odpowiedzi będą tutaj generowane przez JavaScript -->
+          </div>
+
+          <div class="button-container">
+            <button class="btn btn-primary" id="checkBtn">
+              Sprawdź odpowiedzi
+            </button>
+            <button
+              class="btn btn-secondary"
+              id="nextBtn"
+              style="display: none"
+            >
+              Następne pytanie
+            </button>
+          </div>
+        </div>
+
+        <div class="score-container" id="scoreContainer" style="display: none">
+          <div class="score-text" id="scoreText"></div>
+        </div>
+      </main>
     </div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
